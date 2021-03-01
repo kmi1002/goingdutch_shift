@@ -1,0 +1,21 @@
+.service {
+    margin: 50px 30px;
+
+    #page-title {
+        text-align: center;
+    }
+
+    .vendor {
+
+        &__list {
+            margin: 30px 0;
+        }
+
+        &__item {
+            a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    }
+}

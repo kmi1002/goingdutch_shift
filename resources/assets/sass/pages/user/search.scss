@@ -1,0 +1,156 @@
+/*
+    ----------------------------------------
+    Search
+    ----------------------------------------
+*/
+.search {
+
+    &__container {
+    }
+
+    &__title {
+        @include font-normal($main-color, $font-14);
+        margin-bottom: 15px;
+        padding: 10px 0;
+
+        text-align: center;
+    }
+
+    &__text {
+        float: left;
+        width: 100%;
+        padding: 5px;
+        height: 35px;
+        border-radius: 3px;
+    }
+
+
+    &-form {
+        position: relative;
+        background: transparent;
+        height: 40px;
+        width: 40px;
+
+
+        &__input {
+
+            padding: 7px 40px 7px 20px;
+            width: 100%;
+            border: 0;
+            background: none;
+            height: 40px;
+            display: none;
+            //color: #fff;
+
+            &--active {
+                border: 2px solid #e4e4e4;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                display: block !important;
+                border-radius: 30px;
+                width: 180px;
+            }
+        }
+
+        &__button {
+            padding: 7px;
+
+            position: absolute;
+
+            right: 0px;
+            top: 0px;
+        }
+    }
+
+    &-form-full {
+        @extend .search-form;
+        width: 100%;
+
+        &__input {
+            @extend .search-form__input;
+
+            color: #000;
+            width: 100%;
+
+            &--active {
+                @extend .search-form__input--active;
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .post-tag__list {
+        margin-top: 0px !important;
+    }
+}
+
+/*
+    ----------------------------------------
+    Search - Navigation
+    ----------------------------------------
+*/
+.header-search {
+    &__container {
+    }
+}
+
+/*
+    ----------------------------------------
+    Search - Navigation(popup - mobile)
+    ----------------------------------------
+*/
+.popup-search {
+
+    display: none;
+    color: #000;
+
+    &__arrow {
+        position: absolute;
+        right: 58px;
+        bottom: 6px;
+    }
+
+    &__container {
+
+        background: #fff;
+
+        width: 320px;
+        padding: 20px;
+
+        position: absolute;
+        top: 63px;
+        right: 33px;
+
+        z-index: 1000;
+
+        @media (max-width: 670px) {
+            width: 100%;
+
+            padding: 10px;
+
+            right: 0px;
+        }
+    }
+
+    &--active {
+        display: block;
+
+        @media (max-width: 670px) {
+        }
+    }
+
+    @media (max-width: 670px) {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+}
+
+

@@ -1,0 +1,108 @@
+.easypay {
+    padding: 10px;
+
+    &__row {
+        border-bottom: 1px solid $divider-color;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+
+        &-left {
+        }
+
+        &-right {
+        }
+
+        &-text {
+            @include font-normal(#727272, $font-16, normal, 25px);
+        }
+
+        &-checkbox {
+            @include font-normal(#727272, $font-12, normal, 25px);
+        }
+    }
+
+    &__body {
+        padding-bottom: 10px;
+    }
+
+    &__footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 5px 0;
+        @include font-normal(#727272, $font-16);
+
+        border-bottom: 1px dashed $divider-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+
+.card-info {
+    &__row {
+        display: flex;
+        padding: 3px 0;
+
+        &:last-child {
+            padding: 0;
+        }
+
+        line-height: 48px;
+    }
+
+    &__title {
+        width: 130px;
+
+        @include font-normal(#000000, $font-13, normal, 0, 0);
+    }
+
+    &__content {
+        @include font-normal(#000000, $font-13, normal, 0, 0);
+        flex: 1;
+    }
+
+    &__input {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: normal;
+        border: 1px solid #d5d5d5;
+        padding: 0 10px;
+        width: 100%;
+        line-height: 48px;
+
+        &--half {
+            color: #000000;
+            font-size: 1rem;
+            font-weight: normal;
+            border: 1px solid #d5d5d5;
+            padding: 0 10px;
+            width: 48%;
+            line-height: 48px;
+
+            @include md() {
+                width: 46%;
+            }
+        }
+    }
+}

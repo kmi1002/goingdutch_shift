@@ -1,0 +1,98 @@
+.stat-box {
+  padding: 13px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  &:last-child {
+    margin-right: 0;
+  }
+  div {
+    position: relative;
+    overflow: hidden;
+  }
+  p {
+    display: inline-block;
+    &.last {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .title {
+    .l-txt {
+      font-size: 13px;
+      color: #a2a2a2;
+      span {
+        margin-right: 4px;
+        cursor: pointer;
+        &.on {
+          color: #eb4245;
+        }
+      }
+    }
+    .r-txt {
+      font-size: 13px;
+      color: #585858;
+    }
+  }
+  .content {
+    .l-txt {
+      font-size: 13px;
+      color: #eb4245;
+    }
+    .r-txt {
+      font-size: 24px;
+      color: #eb4245;
+      text-align: right;
+      font-weight: bold;
+      span {
+        margin-left: 5px;
+        font-size: 13px;
+        color: #eb4245;
+      }
+    }
+  }
+}
+
+// Huge
+@media only screen and (max-width: 1200px) {}
+
+// Desktop
+@media only screen and (max-width: 992px) {}
+
+// Tablet
+@media only screen and (max-width: 768px) {}
+
+// Mobile
+@media only screen and (max-width: 480px) {
+  .stat-box {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+
+
+
+.responsive {
+  &--hidden {
+    @include sm() {
+      display: none;
+    }
+  }
+  &--show {
+
+  }
+}
+
+.responsive-data {
+  display: none;
+}
+
+@media all and (max-width: 799px) {
+  .responsive-layout {
+    display: none;
+  }
+  .responsive-data {
+    display: block;
+  }
+}

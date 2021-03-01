@@ -1,0 +1,103 @@
+.order {
+  &-detail {
+
+    &__row {
+
+    }
+
+    &__list {
+      &:last-child {
+        border-bottom: none;
+
+        padding: 15px 0;
+      }
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 5px 0;
+      @include font-normal(#727272, $font-16);
+
+      &-option {
+
+      }
+
+      &-price {
+        padding: 5px 0;
+      }
+    }
+
+    &__title {
+      display: block;
+      @include font-normal(#727272, $font-13);
+
+
+      &-header {
+        padding: 10px 0;
+        //display: block;
+        @include font-normal(#505050, $font-14);
+      }
+    }
+
+    &__value {
+      @include font-normal(#a4a4a4, $font-13);
+
+      select {
+        direction: rtl;
+        @include font-normal(#727272, $font-13);
+      }
+    }
+
+    &__notice {
+      border-bottom: 1px solid $divider-color;
+      padding: 15px 0;
+      &-title {
+        @include font-normal(#505050, $font-16);
+        margin-bottom: 5px;
+      }
+
+      &-description {
+        @include font-normal(#a4a4a4, $font-12);
+      }
+    }
+  }
+}
+
+.purchase-btn {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__item {
+    @include btn-normal(#585858, $font-14, #ffffff, 100%, 35px, solid 1px #e0e1e1, 20px);
+
+    flex-basis: 48%;
+
+
+    &:nth-child(odd) {
+        margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 5px;
+      margin-bottom: 10px
+    }
+
+    &--blue {
+      @include btn-select(#ffffff, #007ae5, 1px solid #007ae5);
+    }
+
+    &--red {
+      @include btn-select(#ffffff, #eb4245, 1px solid #eb4245);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

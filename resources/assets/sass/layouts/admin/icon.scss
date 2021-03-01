@@ -1,0 +1,67 @@
+.ico-info {
+    @include ico-base($assets-url+'/img/ico-info.png', 30px, 30px);
+}
+
+.ico-search {
+    @include ico-base($assets-url+'/img/ico-search.png', 20px, 20px);
+}
+
+.ico-modal-close {
+    @include ico-base($assets-url+'/img/ico-modal-close.png', 30px, 30px);
+}
+
+.ico-home-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-home-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-youtube-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-youtube-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-facebook-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-facebook-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-instagram-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-instagram-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-facebook-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-naver-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-naver-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-kakaoplus-on {
+    @include ico-base($assets-url+'/img/ico-home-on.svg', 20px, 20px);
+}
+
+.ico-kakaoplus-off {
+    @include ico-base($assets-url+'/img/ico-home-off.svg', 20px, 20px);
+}
+
+.ico-hamburger-menu {
+    @include ico-base($assets-url+'/img/ico-hamburger-menu.svg', 30px, 30px);
+}

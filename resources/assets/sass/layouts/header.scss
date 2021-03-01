@@ -1,0 +1,64 @@
+.section {
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: 25px 0 3px 0;
+        background: #fff;
+
+        &__noborder {
+            border-bottom: 0px;
+        }
+
+        &__left {
+            display: flex;
+        }
+
+        &__right {
+            margin-left: auto;
+        }
+
+        &__title {
+            @include font-normal(#000, $font-18, bold);
+        }
+
+        &__info {
+            margin-left: 5px;
+            line-height: 1.5rem;
+            cursor: pointer;
+        }
+
+        &__filter {
+            @include font-normal(#000, $font-14);
+
+            &-item {
+                display: inline-block;
+                cursor: pointer;
+
+                &:after {
+                    content: '|';
+                    margin: 0 8px;
+                    color: #DDD;
+                    font-weight: 100;
+                }
+
+                &:last-child:after {
+                    content: '';
+                    margin: 0;
+                    font-weight: 100;
+                }
+
+
+                &--selected {
+                    @include font-select($main-color, 500);
+                }
+
+                &--more {
+                    @include font-select($main-color);
+                }
+
+                &--refresh {
+                }
+            }
+        }
+    }
+}

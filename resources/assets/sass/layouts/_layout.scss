@@ -1,0 +1,109 @@
+.l-box {
+    padding: 10px;
+    background: #fff;
+
+    &__outer {
+
+    }
+
+    &__inner {
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+
+        &-left {
+
+        }
+
+        &-center {
+
+        }
+
+        &-right {
+            &--disabled {
+                pointer-events: none;
+            }
+        }
+
+        &-row {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__body {
+
+    }
+
+    &__footer {
+
+    }
+
+    &__title {
+        @include font-normal(#000, $font-18, bold);
+    }
+
+    &__text {
+
+    }
+
+    &__img {
+
+    }
+
+    &__filter {
+        &__list {
+            @include font-normal(#000, $font-14, normal, 1.5rem);
+            display: flex;
+        }
+
+        &__item {
+            cursor: pointer;
+            //padding: 0 8px;
+
+            &:after {
+                content: '|';
+                margin: 0 8px;
+                color: #ddd;
+                font-weight: 100;
+            }
+
+            &:last-child:after {
+                content: '';
+                margin: 0;
+                font-weight: 100;
+            }
+
+            &--selected {
+                @include font-select($main-color, 500);
+            }
+        }
+
+        &__more {
+            @include font-select($main-color);
+        }
+
+        &__refresh {
+            @include btn-normal(#fff, $font-14, transparent, 30px, 30px);
+        }
+    }
+
+    &__paging {
+
+    }
+
+    &__more {
+
+        // 컬러
+        @mixin color($modifier, $color, $background, $border-color) {
+            &#{--$modifier} {
+                @include btn-normal($color, $font-14, $background, 100%, 30px, 1px solid $border-color, $btn-radius);
+            }
+        }
+        @include color(red, #fff, $main-color, $main-color);
+        @include color(white, #000, #fff, #dadada);
+    }
+}

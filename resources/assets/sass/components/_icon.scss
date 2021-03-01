@@ -1,0 +1,48 @@
+
+/*
+    ----------------------------------------
+    Icon
+    ----------------------------------------
+*/
+
+@mixin ico-base($normal-url, $width: 0, $height: 0, $margin-top: 0, $margin-right: 0, $margin-bottom: 0, $margin-left: 0) {
+
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url($normal-url);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @if $width != 0 {
+        width: $width;
+    }
+
+    @if $height != 0 {
+        height: $height;
+    }
+
+    @if $margin-top != 0 {
+        margin-top: $margin-top;
+    }
+
+    @if $margin-right != 0 {
+        margin-right: $margin-right;
+    }
+
+    @if $margin-bottom != 0 {
+        margin-bottom: $margin-bottom;
+    }
+
+    @if $margin-left != 0 {
+        margin-left: $margin-left;
+    }
+}
+
+@mixin ico-base-hover($normal-url, $hover-url: null, $width: 0, $height: 0, $margin-top: 0, $margin-right: 0, $margin-bottom: 0, $margin-left: 0) {
+
+    @include ico-base($normal-url, $width, $height, $margin-top, $margin-right, $margin-bottom, $margin-left);
+
+    &:hover {
+        background-image: url($hover-url);
+    }
+}

@@ -1,0 +1,50 @@
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    &__container {
+        font-size: 14px;
+        color: #585858;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        overflow: hidden;
+        max-width: 500px;
+        min-height: 300px;
+
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 50px;
+
+        @include sm {
+            padding: 30px 10px;
+            border: none;
+        }
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__body {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &__title {
+        @include font-normal(#000, $font-20);
+        padding: 15px 0;
+    }
+
+    &__desc {
+        @include font-normal(#000, $font-14);
+    }
+
+    .btn-agree {
+        @extend .btn-block;
+        background: $main-color;
+    }
+}

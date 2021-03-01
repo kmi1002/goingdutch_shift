@@ -1,0 +1,44 @@
+.header {
+    border-bottom: 1px solid $divider-color;
+
+    &__container {
+        @extend .layout-660;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+    }
+
+    &__center {
+
+    }
+
+    &__right {
+    }
+
+    &__title {
+        display: inline-block;
+
+        &-text{
+            @include font-normal($main-color, $font-18, normal, 40px)
+        }
+    }
+
+    &__info {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    &__cart {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    &__logo {
+        width: auto;
+        height: auto;
+        max-width: 30px;
+    }
+}

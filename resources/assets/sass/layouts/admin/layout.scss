@@ -1,0 +1,108 @@
+#wrap {
+  display: flex;
+  height: 100vh;
+  position: relative;
+
+  @include sm {
+    #wrap {
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px 0;
+
+  @include sm() {
+    flex-direction: column;
+  }
+
+  &__left {
+    @include font-normal(#000000, $default-font-size, normal, 30px);
+  }
+
+  &__right {
+    @include sm() {
+      margin-top: 5px;
+    }
+  }
+
+  &__title {
+    @include font-normal(#000000, $font-24, 500);
+    margin-right: 10px;
+  }
+
+  &__total {
+    @include font-normal(#000000, $font-12);
+    margin-right: 5px;
+
+  }
+
+  &__today {
+    @include font-normal(#000000, $font-12);
+  }
+}
+
+
+.condition-box {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px 0;
+
+  @include sm() {
+    flex-direction: column;
+  }
+
+  &__left {
+  }
+
+  &__right {
+    @include sm() {
+      margin-top: 5px;
+    }
+  }
+
+  select {
+    display: inline-block;
+    padding: 0 6px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+  }
+}
+
+
+
+.search-box {
+  border: 1px solid #d5d5d5;
+  height: 30px;
+  line-height: 30px;
+  &-form {
+    padding: 0px 10px;
+
+    &__input {
+      @include font-normal(#000000, $font-12);
+      border: none;
+      padding: 0;
+      margin: -4px 0 0 0;
+      width: 200px;
+      line-height: 24px;
+
+      @include sm() {
+        width: 92%;
+      }
+    }
+
+    &__button {
+      @include btn-icon();
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.ico-info {
+  @include ico-base($assets-url+'/img/ico-info.png', 30px, 30px);
+}
+
+.ico-back {
+    @include ico-base($assets-url+'/img/ico-back.png', 30px, 30px);
+}
+
+.ico-cart {
+  @include ico-base($assets-url+'/img/ico-cart.png', 30px, 30px);
+}
+
+.ico-homepage {
+  @include ico-base($assets-url+'/img/ico-homepage.png', 30px, 30px);
+}
+
+.ico-facebook {
+  @include ico-base($assets-url+'/img/ico-facebook.png', 30px, 30px);
+}
+
+.ico-menu-type-tile {
+  @include ico-base($assets-url+'/img/ico-menu-type-title.png', 20px, 20px);
+}
+
+.ico-menu-type-list {
+  @include ico-base($assets-url+'/img/ico-menu-type-list.png', 20px, 20px);
+}
+
+.ico-menu-type-list {
+  @include ico-base($assets-url+'/img/ico-menu-type-list.png', 20px, 20px);
+}
+
+.ico-order-minus {
+  @include ico-base($assets-url+'/img/ico-order-minus.png', 40px, 40px);
+}
+
+.ico-order-plus {
+  @include ico-base($assets-url+'/img/ico-order-plus.png', 40px, 40px);
+}
+
+.ico-receive {
+  @include ico-base($assets-url+'/img/ico-receive.png', 70px, 70px);
+}
+
+.ico-delivery {
+  @include ico-base($assets-url+'/img/ico-delivery.png', 70px, 70px);
+}
+
+.ico-modal-close {
+  @include ico-base($assets-url+'/img/ico-modal-close.png', 30px, 30px);
+}
+
+.ico-close {
+  @include ico-base($assets-url+'/img/ico-close.png', 20px, 20px, -3px);
+}

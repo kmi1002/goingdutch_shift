@@ -1,0 +1,169 @@
+/*
+    ----------------------------------------
+    Features Section
+    ---------------------------------------- 
+*/
+
+.features > .container > {
+    .title-box > .inner {
+        padding: 100px 0 0 0;
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #180909;
+        }
+        .content {
+            font-size: 17px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #180909;
+            margin-top: 50px;
+        }
+
+        hr.blue-line {
+            width: 150px;
+            height: 1px;
+            background-color: #02499a;
+            margin: 30px auto;
+        }
+    }
+    .content-box {
+        background: #F5F4F0;
+    }
+    .content-box > .inner {
+        margin: 100px auto 0;
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #180909;
+
+            margin-bottom: 15px;
+        }
+        .content {
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #180909;
+        }
+        .feature-box {
+            position: relative;
+            padding: 75px 30px 30px;
+            border-top: 4px solid transparent;
+
+        }
+        .feature-box > .feature-icon {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            text-align: center;
+            right: 0;
+            display: block;
+            font-size: 1.75em;
+
+            span {
+                padding: 30px;
+                background: #FFF;
+                color: #0069de;
+                border-radius: 60px;
+                width: 90px;
+                height: 90px;
+                display: inline-block;
+            }
+        }
+        .feature-box > .feature-content {
+            h3 {
+                font-size: 20px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #180909;
+            }
+            .content {
+                font-size: 15px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #180909;
+            }
+        }
+        .actions {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            > div {
+                padding-right: 50px;
+                &:last-child {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {
+    .features > .container > {
+        .title-box > .inner {
+            padding: 70px 10px 0 10px;
+            h2 {
+                font-size: 20px;
+            }
+            .content {
+                font-size: 15px;
+            }
+        }
+        .content-box > .inner {
+            padding: 50px 10px 70px 10px;
+            .actions {
+                flex-direction: column;
+                > div {
+                    padding: 0px 50px 30px 50px;
+                    &:last-child {
+                        padding: 0px 50px;
+                    }
+                }
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .content {
+                font-size: 14px;
+            }
+            .feature-box > .feature-content {
+                h3 {
+                    font-size: 16px;
+                }
+                .content {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

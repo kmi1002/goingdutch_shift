@@ -1,0 +1,53 @@
+.layout-1080 {
+    width: 1080px;
+    padding: 0;
+    margin: 0 auto;
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.layout-990 {
+    width: 990px;
+    padding: 0;
+    margin: 0 auto;
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.layout-660 {
+    width: 660px;
+    padding: 0;
+    margin: 0 auto;
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.layout-330 {
+    width: 330px;
+    padding: 0;
+    margin: 0 auto;
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.layout-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    &__container {
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

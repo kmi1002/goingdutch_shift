@@ -1,0 +1,54 @@
+/*
+    ----------------------------------------
+    Popup
+    ----------------------------------------
+*/
+.modal {
+    padding: 20px;
+
+    &-header {
+        @include font-normal(#000, $font-18, normal, 40px);
+
+        display: flex;
+        justify-content: space-between;
+
+        &__close {
+            @include btn-icon();
+        }
+    }
+
+    &-body {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+
+        button {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__button {
+
+            &--done {
+                @include btn-normal(#fff, $font-14, $main-color, 130px, 30px, 1px solid $main-color);
+            }
+
+            &--ok {
+                @include btn-normal(#fff, $font-14, $main-color, 130px, 30px, 1px solid $main-color);
+            }
+
+            &--cancel {
+                @include btn-normal($main-color, $font-14, #fff, 130px, 30px, 1px solid $main-color);
+            }
+        }
+
+    }
+}

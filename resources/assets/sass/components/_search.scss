@@ -1,0 +1,41 @@
+.date-search {
+    display: flex;
+
+    &__range {
+        margin-right: 5px;
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #d1d1d1;
+            background: #fafafa;
+            font-size: $font-12;
+            text-align: center;
+            cursor: pointer;
+
+            &.on, &:hover {
+                color: #fff;
+                background: #eb4245;
+                border: 1px solid #eb4245;
+            }
+        }
+    }
+
+    &__calander {
+        &-datepicker {
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 8px;
+            border: 1px solid #d1d1d1;
+            background: #fafafa;
+            font-size: $font-12;
+        }
+
+        &-divider {
+            display: inline-block;
+        }
+    }
+}

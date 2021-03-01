@@ -1,0 +1,45 @@
+.tab-menu {
+    @extend .scroll-x;
+
+    padding-bottom: 2px;
+    border-bottom: 1px solid #e0e0e0;
+
+    &__list {
+        display: flex;
+    	margin: 0 auto;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__item {
+        @include font-normal(#000, $font-12);
+        flex: 1;
+        padding: 10px;
+
+        &--selected {
+            color: #101010;
+            border-bottom: 2px solid #101010;
+        }
+    }
+
+    &__filter {
+        display: flex;
+        text-transform: uppercase;
+
+        li {
+            &.on, &:hover {
+                color: #0069de;
+            }
+
+            &:after {
+                content: '|';
+                margin: 0 8px;
+                color: #DDD;
+            }
+
+            &:last-child:after {
+                content: '';
+            }
+        }
+    }
+}

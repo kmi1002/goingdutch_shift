@@ -1,0 +1,93 @@
+.invoice {
+    margin: 15px;
+
+    &__header {
+        text-align: center;
+        &--title {
+            @include font-normal(#000000, $font-20, bold);
+            margin-bottom: 10px;
+        }
+
+        &--description {
+            @include font-normal(#000000, $font-14, normal);
+        }
+    }
+
+    &__body {
+        .invoice__section {
+            border-bottom: 1px dotted #eaeaea;
+        }
+
+        .invoice__section:last-child {
+            border-top: 1px dashed #eaeaea;
+            border-bottom: none;
+        }
+    }
+
+    &__footer {
+        .invoice__row {
+            justify-content: center;
+        }
+    }
+
+    &__addition {
+
+    }
+
+    &__section {
+        padding: 5px 0;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+
+
+        @include font-normal(#000000, $font-13, normal);
+
+        &--strong {
+            @include font-normal(#000000, $font-16, normal);
+            justify-content: center;
+
+        }
+
+        &--middle {
+            @include font-normal(#000000, $font-14, normal);
+
+        }
+
+        &--week {
+            @include font-normal(#000000, $font-10, normal);
+            padding: 0;
+        }
+
+        &--center {
+            justify-content: center;
+
+        }
+    }
+
+    &-admin {
+        margin: 0 auto;
+
+
+        &-inner {
+            border: 1px solid #eaeaea;
+            padding: 10px;
+
+            &:not(first-child) {
+                margin-top: 10px;
+            }
+        }
+
+        @include sm() {
+            width: 320px;
+        }
+    }
+}
+
+.event-coupon {
+    width: auto; height: auto;
+    max-width: 200px;
+}

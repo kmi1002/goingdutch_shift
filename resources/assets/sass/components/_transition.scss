@@ -1,0 +1,16 @@
+/*
+    ----------------------------------------
+    General - transition
+    ----------------------------------------
+*/
+@mixin transition($option){
+	transition: $option 0.5s, transform 0.5s;
+}
+
+@mixin transition-slow($option){
+	transition: $option 0.8s, transform 0.8s;
+}
+
+@mixin transition-fast($option){
+	transition: $option 0.2s, transform 0.2s;
+}

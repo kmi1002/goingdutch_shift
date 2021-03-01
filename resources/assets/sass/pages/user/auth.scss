@@ -1,0 +1,102 @@
+.divider {
+    background: #ddd;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    margin: 40px auto;
+    
+    span {
+        width: 40px;
+        background: #fff;
+        position: absolute;
+        margin-left: -20px;
+        top: -5px;
+        color: #999;
+    }
+}
+
+
+
+.auth {        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //width: 100vw;
+    
+    @media (min-width: 768px) {
+        height: 100vh;
+    }
+
+    &__container {
+        font-size: 14px;
+        color: #585858;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        overflow: hidden;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 50px;
+        
+        @include sm {
+            padding: 30px 10px;
+        }
+    }
+    
+    &-header {
+        text-align: center;
+    }
+    
+    &-body {
+        //margin-top: 15px;
+        text-align: center;
+
+
+        input {
+            border-bottom: 1px solid $main-color;
+            padding-left: 10px;
+        }
+
+        .placeholder {
+            color: $main-color;
+        }
+    }
+    
+    &__title {
+        @include font-normal(#000, $font-18);
+        padding: 15px 0;
+    }
+    
+    &__desc {
+        @include font-normal(#000, $font-14);
+        padding: 8px;
+        //background: #efefef;
+        border-radius: $btn-radius;
+        margin-bottom: 30px;
+    }
+
+    .social {
+        &__list {
+            
+        }
+        
+        &__item {
+            margin-bottom: 5px;
+            
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    
+    .signup-agree {
+        font-size: 0.75rem;
+        margin-top: 10px;
+    }
+
+    .btn-agree {
+        @extend .btn-block;
+        background: #EE4040;
+    }
+}

@@ -1,0 +1,20 @@
+/*
+    ----------------------------------------
+    Footer
+    ----------------------------------------
+*/
+.footer {
+    padding: 0 10px;
+    border-top: 1px solid #efefef;
+
+    &__container {
+        @extend .container;
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        margin-top: 15px;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,384 @@
+// 매장
+.vendor {
+    // 소개
+    &__info {
+        @include font-normal($text-color, $font-14);
+        padding: 10px;
+    }
+
+    // 주요 이미지
+    &__hero {
+        padding: 0 10px;
+
+        @include md() {
+            padding: 0;
+        }
+
+        &-list {
+
+        }
+
+        &-item {
+            position: relative;
+            height: 0px;
+            padding-top: 56.3%;
+            overflow: hidden;
+            width: 468px;
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    // SNS 정보
+    &__sns {
+        position: relative;
+
+        &-list {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            z-index: 10;
+
+            @include md() {
+                right: 10px;
+            }
+        }
+
+        &-item {
+            &:not(:first-child) {
+                margin-left: 5px;
+            }
+        }
+
+        &-link {
+            display: inline-block;
+            border: 1px solid $divider-color;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+
+    // 스와이프 페이징
+    .swiper-pagination-bullet-custom {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        line-height: 10px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0,0,0,0.2);
+    }
+
+    .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
+        color: #fff;
+        background: red;
+    }
+}
+
+// 메뉴
+.menu {
+    padding: 10px;
+
+    ///////////////////
+    // 메뉴 리스트
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 10px 0;
+        line-height: 30px;
+
+        &-left {
+        }
+
+        &-right {
+        }
+
+        &-text {
+            @include font-normal(#000000, $font-18, 400);
+        }
+        &-button {
+            @include btn-normal(#000000, $font-13, transparent, 0, 30px);
+        }
+    }
+
+    &__body {
+    }
+
+    &__footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: 50%;
+        min-width: 0;
+        padding-bottom: 10px;
+
+        &-inner {
+            border: 1px solid #CCCCCC;
+        }
+
+        &:nth-child(odd) {
+            padding-right: 5px;
+        }
+
+        &:nth-child(even) {
+            padding-left: 5px;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__summary {
+        padding: 10px;
+
+        &-hot {
+            @include font-normal($main-color, $font-11, normal, 0);
+            padding-bottom: 5px;
+        }
+
+        &-title {
+            @include font-normal(#000000, $font-14, 500);
+            padding-bottom: 3px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &-subtitle {
+            @include font-normal(#afafaf, $font-12);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    // 빠른 주문
+    .quick-order {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 7px 10px 10px;
+
+        &__price {
+            @include font-normal(#000000, $font-14, normal, 30px);
+
+            &-currency {
+
+            }
+        }
+
+        &__count {
+            display: flex;
+            line-height: 30px;
+
+            &-cart {
+                @include btn-normal(#fff, $font-14, 0, 0, 0, 0, 0, 0 0 0 3px);
+            }
+        }
+    }
+
+    &__more {
+        @include btn-normal(#ffffff, $font-14, $main-color, 130px, 35px, none, $btn-radius, 0, 0 auto);
+    }
+
+    ///////////////////
+    // 메뉴 상세
+    &__row {
+        border-bottom: 1px solid $divider-color;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__info {
+        text-align: center;
+
+        &-img {
+            width: 100px;
+        }
+
+        &-title {
+            @include font-normal(#565656, $font-16);
+            padding-top: 10px;
+        }
+
+        &-subtitle {
+            @include font-normal(#a4a4a4, $font-13);
+            padding-top: 3px;
+        }
+
+        &-description {
+            @include font-normal(#727272, $font-14);
+            padding: 10px;
+        }
+    }
+
+    &__notice {
+        padding: 20px 0;
+        &-title {
+            @include font-normal(#727272, $font-16);
+        }
+
+        &-description {
+            @include font-normal(#a4a4a4, $font-12);
+            padding-top: 10px;
+        }
+    }
+}
+
+// 주문
+.order {
+    &__count {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        margin: 0 auto;
+        padding: 10px 0;
+
+        &-minus {
+            @include btn-normal(#ffffff, $font-24);
+        }
+        &-number {
+            @include font-normal($main-color, $font-24, normal, 40px);
+        }
+        &-plus {
+            @include btn-normal(#ffffff, $font-24);
+        }
+    }
+
+    &__option {
+        text-align: center;
+        padding: 20px 0 10px 0;
+
+        &-different {
+            @include font-normal(#727272, $font-16, normal, 0, 0);
+
+            &--red {
+                @include font-normal(#eb4245, $font-16, normal, 0, 0);
+            }
+        }
+    }
+
+    &__price {
+
+        display: flex;
+
+        justify-content: space-between;
+        padding: 20px 0;
+
+        &-text {
+            @include font-normal(#727272, $font-16);
+        }
+        &-value {
+            @include font-normal($main-color, $font-14);
+        }
+
+        &-currency {
+
+        }
+    }
+
+    // 주문 방식
+    &__action {
+
+        &-list {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        &-item {
+            @include btn-normal(#eb4245, $font-14, #ffffff, 130px, 30px, solid 1px #eb4245, 15px, 0, 0 5px 0 0);
+
+            &--cart {
+
+            }
+
+            &--sell {
+                @include btn-select(#ffffff, #eb4245, 1px solid #eb4245);
+            }
+        }
+    }
+
+    // 주문 방식
+    &__type {
+
+        text-align: center;
+
+        &-header {
+            text-align: center;
+
+            border-bottom: 1px solid #ededed;
+        }
+
+        &--receive {
+            @include btn-normal(#eb4245, $font-13, transparent, 70px, 0, 0, 0);
+        }
+
+        &--delivery {
+            @include btn-normal(#eb4245, $font-13, transparent, 70px, 0, 0, 0);
+        }
+    }
+}
+
+// 옵션 선택
+.option {
+    &__list {
+        padding: 3px 0;
+        border-bottom: 1px dashed $divider-color;
+
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 17px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        line-height: 25px;
+
+        &--title {
+            @include font-normal(#727272, $font-13);
+        }
+
+        &--value {
+            @include font-normal(#a4a4a4, $font-13);
+
+            select {
+                width: 150px;
+                direction: rtl;
+                @include font-normal(#727272, $font-13);
+            }
+        }
+    }
+}
+
+// 장바구니 방식
+.cart__type {
+
+    &-item {
+        @include btn-normal(#eb4245, $font-14, #ffffff, 130px, 30px, solid 1px #eb4245, 15px, 0, 0 5px 0 0);
+
+        &--shopping {
+            @include btn-select(#ffffff, #eb4245, 1px solid #eb4245);
+        }
+
+        &--cart {
+        }
+    }
+}

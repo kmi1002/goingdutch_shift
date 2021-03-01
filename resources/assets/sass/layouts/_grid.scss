@@ -1,0 +1,68 @@
+/*
+    ----------------------------------------
+    Grid
+    ----------------------------------------
+*/
+.grid {
+    display: flex;
+    > {
+        li, div {
+            flex: 1;
+        }
+    }
+}
+
+.grid-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-w25 {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+        flex-basis: 25%;
+    }
+}
+
+.grid-w33 {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+        flex-basis: 33.3%;
+    }
+}
+
+.grid-w50 {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {
+    .grid > li, .grid-w25 > li {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+    .grid-w25 > li {
+        flex-basis: 50%;
+    }
+    .grid-w33 > li, .grid-w50 > li {
+        flex-basis: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grid-w25 > li, .grid-w33 > li, .grid-w50 > li {
+        flex-basis: 100%;
+    }
+}

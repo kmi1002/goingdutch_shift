@@ -1,0 +1,1 @@
+@extends('errors.app')@section('imageAttribute', 'src=/img/ico-error500.png')@section('h1Text')    {{ __('error.500.title') }}@endsection@section('h2Text')    {!!  __('error.500.description') !!}@endsection

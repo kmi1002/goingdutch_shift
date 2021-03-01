@@ -1,0 +1,137 @@
+.cart {
+    padding: 10px;
+
+    &__row {
+        border-bottom: 1px solid $divider-color;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+
+        &-left {
+        }
+
+        &-right {
+        }
+
+        &-text {
+            @include font-normal(#727272, $font-16, normal, 25px);
+        }
+        &-checkbox {
+            @include font-normal(#727272, $font-12, normal, 25px);
+        }
+    }
+
+    &__body {
+        padding-bottom: 10px;
+    }
+
+    &__footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 5px 0;
+        @include font-normal(#727272, $font-16);
+
+        border-bottom: 1px dashed $divider-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 5px;
+    }
+
+    &__photo {
+        width: 60px;
+        height: 60px;
+        margin-right: 5px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        overflow: hidden;
+        border-radius: $img-radius;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            line-height: 30px;
+        }
+
+        &-body {
+            display: flex;
+            justify-content: space-between;
+            line-height: 30px;
+        }
+
+        &__check {
+
+        }
+
+        &-title {
+            @include font-normal(#000000, $font-16, normal, 0, 0);
+        }
+
+        &-delete {
+            @include btn-normal(#ffffff, $font-13, transparent, 0, 0);
+        }
+
+        &-options {
+            @include font-normal(#727272, $font-13, normal, 0, 0);
+        }
+
+        &-price {
+            @include font-normal(#727272, $font-13, normal, 0, 0);
+        }
+    }
+
+    &-order {
+        &__price, &__count {
+
+            display: flex;
+
+            justify-content: space-between;
+            padding: 3px 0;
+
+            &-text {
+                @include font-normal(#a4a4a4, $font-13);
+            }
+            &-value {
+                @include font-normal($main-color, $font-13);
+            }
+
+            &-currency {
+
+            }
+        }
+    }
+}

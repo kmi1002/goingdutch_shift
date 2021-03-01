@@ -1,0 +1,56 @@
+.error {
+  @extend .layout-660;
+  @extend .layout-center;
+
+  &__container {
+    @extend .layout-center__container;
+
+    text-align: center;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+
+    @include md {
+      max-width: 40%;
+    }
+  }
+
+  &__title {
+    margin-top: 30px;
+    font: 700 22px/22px 'Nanum Square';
+    color: #333;
+    letter-spacing: -1px;
+  }
+
+  &__description {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: -1px;
+    background: #f9f9f9;
+  }
+
+  &__actions {
+    margin-top: 30px;
+  }
+
+  &__btn--red {
+    background: #EE4040;
+    border: 0;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5rem;
+    padding: 0 50px;
+
+    &:link, &:active, &:visited {
+     color: #fff;
+    }
+  }
+}
